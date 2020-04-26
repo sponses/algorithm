@@ -37,11 +37,9 @@ function dfs1(n, k) {
  * 输出自然数 1 到 n 所有不重复的排列，
  * 即 n 的全排列，要求所产生的任一数字序
  * 列中不允许出现重复的数字。
- * 输出由 1∼n 组成的所有不重复的
- * 数字数组
  * @param {Number} n
  */
-function dfs2(n) {
+function eg2(n) {
   const ans = []
   const used = new Array(n + 1)
   used.fill(false)
@@ -63,3 +61,11 @@ function dfs2(n) {
   dfs()
   return ans
 }
+
+/**
+ * 双向搜索
+ * 双向同时搜索
+ * 从状态图上起点和终点同时开始进行
+ * 宽度/深度优先搜索，如果发现相遇了，
+ * 那么可以认为是获得了可行解。
+ */
